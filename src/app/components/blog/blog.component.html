@@ -1,0 +1,22 @@
+<div class="row mr-0">
+  <div id="sidebar" class="col-sm-5 col-md-4 col-lg-3 pr-0">
+    <div class="box">
+      <div class="list-group" style="border: 1px solid rgb(0, 201, 43);">
+        <a id="blog-itm-{{item.Id}}" [routerLink]="['/blog',item.Id]" (click)="clickOnBlogListItem(item.Id)" class="list-group-item list-group-item-action"
+          *ngFor="let item of blogFullDatas" style="background-color: black;font-weight: bold;color: rgb(16, 139, 0);">
+          {{item.Date}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="blogContent" class="col-sm-7 col-md-8 col-lg-9 pl-0">
+    <div class="box">
+      <div class="p-3 clearfix" style="border:1px solid orange;border-radius: 5px;">
+        <h3>
+          {{blogHeader}}
+        </h3>
+        <div [innerHTML]="blogContent"></div>
+      </div>
+    </div>
+  </div>
+</div>

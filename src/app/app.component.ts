@@ -1,3 +1,4 @@
+import { BlogManager } from './components/blog/blog-manager.service';
 import { RootDataItem } from './datastore/root-data-item.model';
 import { RootData } from './datastore/root-data.model';
 
@@ -11,10 +12,13 @@ declare var anime: any;
 })
 export class AppComponent implements AfterViewInit {
 
+  defaultBlog = '';
+
   year: string;
   rootList: RootDataItem[] = [];
 
-  constructor(public rootData: RootData) {
+  constructor(public rootData: RootData, public blogManager: BlogManager) {
+    this.defaultBlog = blogManager.GetBlogList()[0].Id.toString();
     this.rootList = rootData.rootList;
     this.year = new Date().getFullYear().toString();
   }

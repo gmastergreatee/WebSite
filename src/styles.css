@@ -4,6 +4,10 @@ body {
     background-color: #c4c4c4 !important;
 }
 
+.full-width {
+    width: 100% !important;
+}
+
 .fixed-bottom {
     background-color: #292b2c;
     font-size: 14px;
@@ -13,10 +17,22 @@ body {
     color: rgb(173, 255, 134) !important;
 }
 
+.list-group-item.active {
+    border-color: black !important;
+    background-color: rgb(0, 26, 9) !important;
+    color: rgb(243, 255, 133) !important;
+}
+
+#blogContent > .box > div > h3 {
+    color: orange;
+}
+
+
 /* Box related graphics */
 
 .box {
     margin: 15px;
+    margin-bottom: 0px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;

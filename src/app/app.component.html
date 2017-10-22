@@ -3,7 +3,7 @@
     <a class="navbar-brand" id="siteName">GMasterGreatee's Blog</a>
     <ul class="navbar-nav">
       <li *ngFor="let item of rootList" class="nav-item">
-        <a class="nav-link">{{item.Caption}}</a>
+        <a class="nav-link" [routerLink]="" routerLinkActive="active">{{item.Caption}}</a>
       </li>
     </ul>
   </div>
@@ -12,7 +12,8 @@
   <!-- Header Overlay Seperator -->
 </div>
 
-<!-- Router-Link here -->
+<!-- Router-Outlet here -->
+<router-outlet></router-outlet>
 
 <div class="mt-5">
   <!-- Footer Overlay Seperator -->
