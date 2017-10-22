@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LinkManager } from './link-manager.service';
+
+import { FullData } from './datastore/full-data.model';
+import { RootData } from './datastore/root-data.model';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { LinkManager } from './link-manager.service';
     BrowserModule
   ],
   providers: [
-    LinkManager
+    RootData,
+    FullData
   ],
   bootstrap: [AppComponent]
 })
