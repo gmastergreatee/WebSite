@@ -20,7 +20,8 @@
       "prefix": "gm",
       "styles": [
         "styles.css",
-        "./assets/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"
+        "./assets/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css",
+        "./assets/font-awesome-4.7.0/css/font-awesome.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
