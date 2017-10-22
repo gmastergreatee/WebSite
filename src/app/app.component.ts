@@ -12,13 +12,10 @@ declare var anime: any;
 })
 export class AppComponent implements AfterViewInit {
 
-  defaultBlog = '';
-
   year: string;
   rootList: RootDataItem[] = [];
 
-  constructor(public rootData: RootData, public blogManager: BlogManager) {
-    this.defaultBlog = blogManager.GetBlogList()[0].Id.toString();
+  constructor(public rootData: RootData) {
     this.rootList = rootData.rootList;
     this.year = new Date().getFullYear().toString();
   }

@@ -4,13 +4,17 @@ body {
     background-color: #c4c4c4 !important;
 }
 
-.full-width {
-    width: 100% !important;
-}
-
 .fixed-bottom {
     background-color: #292b2c;
     font-size: 14px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
 }
 
 .nav-link.active {

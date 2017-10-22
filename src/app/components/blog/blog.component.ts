@@ -22,11 +22,11 @@ export class BlogComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    const passedId = +this.route.snapshot.params['id'];
+    let passedId = +this.route.snapshot.params['id'];
     if (isNaN(passedId)) {
       this.router.navigate(['/redirectToBase']);
     }
-    const foundBlog = this.blogFullDatas[passedId - 1];
+    let foundBlog = this.blogFullDatas.find(i => i.Id === passedId);
     if (foundBlog === undefined) {
       this.router.navigate(['/redirectToBase']);
       this.paramsError = true;
@@ -39,8 +39,10 @@ export class BlogComponent implements AfterViewInit, OnInit {
       if (this.isInitialized) {
         this.animateContent(false);
         setTimeout(() => {
-          this.blogContent = this.blogFullDatas[+params['id'] - 1].Content;
-          this.blogHeader = this.blogFullDatas[+params['id'] - 1].Caption;
+          passedId = +params['id'];
+          foundBlog = this.blogFullDatas.find(i => i.Id === passedId);
+          this.blogContent = foundBlog.Content;
+          this.blogHeader = foundBlog.Caption;
           this.animateContent(true);
         }, 120);
       }

@@ -19,8 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "gm",
       "styles": [
-        "styles.css",
-        "./assets/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css"
+        "styles.css"
       ],
       "scripts": [
         "./assets/anime.min.js"
