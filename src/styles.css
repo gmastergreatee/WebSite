@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #c4c4c4 !important;
+}
+
+.fixed-bottom {
+    background-color: #292b2c;
+    font-size: 14px;
+}
+
+.nav-link.active {
+    color: rgb(173, 255, 134) !important;
+}
+
+/* Box related graphics */
+
+.box {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #292b2c;
+    color: white;
+}
